@@ -1,18 +1,7 @@
-//Kommentar här
 /**................ 
- * MultiLineComment 
+ *  @Author: Erik Torres Puente
  * ................
  */
- //async function fetchTodos() {
-    //let res = await fetch('/rest/todos')
-    //let todos = await res.json()
-
-    //console.log(todos)
-
-    //for(let todo of todos) {
-        //addTodo(todo)
-    //}   
-//}
 
 let chart = new Chart("chart",{
     type:"bar",

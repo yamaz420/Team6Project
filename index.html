@@ -4,9 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameDatabase Application</title>
+    <title>Video Game Sales Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
+    <div class="logo"><a href="index.html"><img src="img/iconrg80.ico" alt=""></a>
+        <span class="logo-name">VGSP</span>
+    </div>
+    <nav class="body-nav">
+        <ul class="body-ul">
+            <li><a class= "home" href="index.html">HOME</a></li>
+            <li><a class= "about" href="about.html">ABOUT</a></li>
+            <li><a class= "sale" href="sale.html">SALE</a></li>
+            <li><a class= "port" href="portfolio.html">PORTFOLIO</a></li>
+            <li><a class= "contact" href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section class="front-display">
     
+        <div class="content">
+            <h2 class="content-bold">Artificial Intelligence<br>Video Games Sales Prediction <em>(VGSP)</em></h2>
+            <p class="info">Explore the mechanism of Artificial Intelligence (AI), supported with reliable data in terms of <br>
+            analyzing a constructed Machine Learning model. Manage and construct your own data <br> with access to database from the video games sales market. Predict a percentage value <br></p>
+            <div class="buttons-ai">
+               <a href="about.html"></a><button class="read-more">READ MORE</button>
+               <a href="#"></a><button class="database">SHOW DATA</button>
+            </div>
+            <div class="search-box">
+                <form>
+                <input class="search-type" type="text" name="" placeholder="Type to search..">
+                <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h2 class="category-dsc">Video Category</h2>
+
+        <div class="select-box">
+            <div class="options-container active">
+
+                <div class="option">
+                    <input class="radio" type="radio" id="Playstation" name="category">
+                    <label for="Playstation">Playstation</label>
+                </div>
+
+                <div class="option">
+                    <input class="radio" type="radio" id="Xbox" name="category">
+                    <label for="Xbox">Xbox</label>
+                </div>
+
+                <div class="option">
+                    <input class="radio" type="radio" id="Nintendo" name="category">
+                    <label for="Nintendo">Nintendo</label>
+                </div>
+
+                <div class="option">
+                    <input class="radio" type="radio" id="SNES" name="category">
+                    <label for="SNES">SNES</label>
+                </div>
+
+            </div>
+
+            <div class="selected">
+                Select Video Category
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <div class="combo-box">
+        <select>
+            <option value="">Playstation</option>
+            <option value="">Nintendo</option>
+            <option value="">Xbox</option>
+            <option value="">Snes</option>
+        </select>
+    </div>
+    
+    <label>Custom select box testing: </label>
+    <input type="text" id="new_value"/>
+    <select id="combobox">
+        <option value="">Select one...</option>
+        <option value="first">Playstation</option>
+        <option value="second">Nintendo</option>
+    </select>
+
+    <input class="test-submit" type="submit" value="Predict">
+    
+    <div class="test-buttons">
+        <button name="submit-prediction" type="submit" value="submit">Predict button</button>
+        <button name="normal-button" type="button">Predict</button>
+        <button name="reset-button" type="reset">Reset</button>
+    </div>
+
+    <div class="textarea-container">
+        <textarea name="textarea" class="textarea" id="" cols="30" rows="10">Predicted values displayed here: </textarea>
+    </div>
+
+    <h1>Getting started with Chart</h1>
+    <canvas id="chart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

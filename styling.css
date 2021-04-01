@@ -198,7 +198,7 @@ li a:hover{
     position: absolute;
     width: 250px;
     height: 30px;
-    right: 730px;
+    right: 700px;
     top: 190px;
     border-radius: 50px;
     padding: 0px 10px;
@@ -212,7 +212,7 @@ li a:hover{
 .search-btn{
     position: absolute;
     top: 195px;
-    right: 740px;
+    right: 710px;
     border-radius: 50%;
     border: none;
     font-size: 19px;
@@ -325,6 +325,5 @@ select{
 
 .textarea-container{
     margin-left: 70%;
-    margin-top: -30%
 }
 

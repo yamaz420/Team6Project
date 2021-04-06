@@ -3,70 +3,67 @@
  * ................
  */
 
-let chart = new Chart("chart",{
-    type:"bar",
-    data:{
-        labels:["Red", "Blue", "Yellow", "Green"],
-        datasets: [
-            {
-                order: 1,
-                label: "Data",
-                borderWidth: 3,
-                data: [30, 10,20,35],
-                backgroundColor:["red", "blue", "yellow", "green"]
-            }
-        ]
-    },
-    options: {
-        onClick(e){
-            console.log(chart.getElementAtEvent(e)[0])
-            let point = console.log(chart.getElementAtEvent(e)[0])
+ const selectAll = document.querySelectorAll(".selection");
 
-            if(point){
-                let label = chart.data.labels[point.index]
-                let value = chart.data.datasets[point.datasetIndex].data[point_index]
-                console.log(label,value)
-            }
-        },
-
-        onHover(e){
-            let point = chart.getElementAtEvent(e)[0]
-
-            if (point){
-                e.target.style.cursor = "pointer"
-            } else{
-                e.target.style.cursor = "default"
-            }
-        }
-    }
-})
-
-function addChartData(label, color, data){
-    let chartDataset = chart.data.datasets[0]
-    
-    chart.data.labels.push(label)
-chartDataset.data.push(data)
-chartDataset.backgroundColor.push(color)
-chart.update()
-}
-
-addChartData("Purple", "purple", "15")
-addChartData("Orange", "orange", "35")
-
-function addLineDataset(){
-    chart.data.datasets.push({
-        label: "Line Dataset",
-        data: [90, 32,5,15,45,62],
-        type: "line",
-        backgroundColor: ["rgba(0,0,0,0"],
-        borderColor: ["#03a5fc"],
-        order: 0,
-        pointRadius: 10,
-        pointBorderColor: "black",          
-    })
-
-    chart.update()
-}
-
-addLineDataset()
-
+ selectAll.forEach((selection) => {
+     const valuesWrapper = selection.previousElementSibling;
+     const values = valuesWrapper.querySelectorAll(".option");
+     
+     selection.addEventListener("click", () => {
+         if(valuesWrapper.classList.contains("active")) {
+             valuesWrapper.classList.remove("active");
+         } else {
+             let statusActive = document.querySelector(".values-wrapper.active");
+ 
+             if (statusActive) {
+                 statusActive.classList.remove("active");
+             }
+ 
+             valuesWrapper.classList.add("active");
+         }
+     });
+     
+     values.forEach((v) => {
+         v.addEventListener("click", () => {
+             selection.innerHTML = v.querySelector("label").innerHTML;
+             valuesWrapper.classList.remove("active");
+         });
+     });
+ })
+ 
+     
+ var ctx = document.getElementById('canvas').getContext('2d');
+ var myChart = new Chart(ctx, {
+     type: 'line',
+     data: {
+         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+         datasets: [{
+             label: 'Video Game Sales (2000-2010)',
+             data: [12, 19, 3, 5, 2, 3],
+             backgroundColor: "transparent",
+             borderColor: "red",
+             borderWidth: 1
+         },
+         {
+             label: 'Video Game Sales (2010-2021)',
+             data: [12, 19, 3, 5, 2, 3],
+             backgroundColor: "transparent",
+             borderColor: "green",
+             borderWidth: 1
+         }]
+     },
+     options: { 
+         elements:{
+             line:{
+                 tension:0
+             }
+         },
+         scales: {
+             y: {
+                 beginAtZero: true
+             }
+         }
+     }
+ });
+ 
+ 

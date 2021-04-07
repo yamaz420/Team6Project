@@ -22,4 +22,4 @@ def predict(Level):
 
 # kalla på båda funktionerna train_model() och predict():
 train_model()
-predict(Level)  
+predict(Level=1)  

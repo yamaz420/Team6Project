@@ -2,9 +2,15 @@
  *  @Author: Erik Torres Puente
  * ................
  */
-
+let level;
  const selectAll = document.querySelectorAll(".selection");
+const predictButton = document.querySelector(".predict-btn")
 
+predictButton.addEventListener("click", ()=>{
+    if(level){
+        alert(level)
+    }
+})
  selectAll.forEach((selection) => {
      const valuesWrapper = selection.previousElementSibling;
      const values = valuesWrapper.querySelectorAll(".option");
@@ -25,8 +31,14 @@
      
      values.forEach((v) => {
          v.addEventListener("click", () => {
-             selection.innerHTML = v.querySelector("label").innerHTML;
-             valuesWrapper.classList.remove("active");
+            let option = v.querySelector("label")
+            selection.innerHTML = option.innerHTML;
+            valuesWrapper.classList.remove("active");
+            let dataLevel = option.getAttribute("data-level")
+            if (dataLevel){
+                level = dataLevel
+
+            }
          });
      });
  })

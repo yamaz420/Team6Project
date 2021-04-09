@@ -23,5 +23,5 @@ def predict(Level):
 # kalla på båda funktionerna train_model() och predict():
 # train_model()
 # predict(Level=5) 
-  result = {"Predicted sales in selected genre": prediction[0]}
+  result = {"prediction": prediction[0]}
   return result

@@ -3,7 +3,7 @@
  * ................
  */
 let level;
- const selectAll = document.querySelectorAll(".selection");
+const selectAll = document.querySelectorAll(".selection");
 const predictButton = document.querySelector(".predict-btn")
 
 predictButton.addEventListener("click", ()=>{

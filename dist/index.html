@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Game Sales Prediction</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -38,7 +37,7 @@
             <h2 class="content-bold">Artificial Intelligence<br>Video Games Sales Prediction <em>(VGSP)</em></h2>
             <p class="info">Explore the mechanism of Artificial Intelligence (AI), supported with reliable data in terms of <br>
             analyzing constructed Machine Learning models. Manage individual data with access to<br> global database from the video games sales market, combined with processed trained <br> 
-            supervised learning algorithms. Select categories and predict a percentage value of <br>probability in the global sales market.</p>
+            supervised learning algorithms. Select categories and predict a value for video games<br> sold in the global sales market <em>(2010-2019).</em></p>
             
             <div class="buttons-ai">
                <a href="https://builtin.com/artificial-intelligence"><button class="read-more">READ MORE</button></a>
@@ -72,7 +71,7 @@
 
         <div class="btn-square">
 
-            <div class="values-wrapper">
+            <div class="values-wrapper" id="platform-container">
 
                 <div class="option">
                     <input class="radio" type="radio" id="Playstation" name="category">
@@ -225,8 +224,7 @@
         <span class="arrow-three"><i class="fas fa-level-down-alt"></i></span>
         <span class="arrow-four"><i class="fas fa-angle-double-right"></i></span>
         <span class="arrow-five"><i class="fas fa-angle-double-right"></i></span>
-        <span class="arrow-six"><i class="fas fa-level-up-alt"></i></span>
-        <span class="arrow-seven"><i class="fas fa-level-down-alt"></i></span>
+        <span class="arrow-six"><i class="fas fa-angle-double-right"></i></span>  
     </div>
 
     <div class="predict-button">
@@ -237,11 +235,10 @@
     
     <div class="textarea-container">
         <textarea name="textarea-one" class="textarea-one" id="" cols="30" rows="10">100%</textarea>
-        <textarea name="textarea-two" class="textarea-two" id="" cols="30" rows="10">78%</textarea>
     </div>
 
     <div class="canvas-container">
-        <h1 class="canvas-head">VGSP Probability Multiple Linear Reggression</h1>
+        <h1 class="canvas-head">VGSP Random Forest Probability</h1>
         <div>
             <canvas id="canvas"></canvas>
         </div>

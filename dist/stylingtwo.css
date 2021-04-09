@@ -1,0 +1,201 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.image-container1,.image-container2,.image-container3,.image-container4{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.img1{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 260px;
+    transform: translate(-50%,-50%);
+    animation: text-zoom 3s linear infinite;
+}
+
+.img2{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 350px;
+    transform: translate(-50%,-50%);
+    animation: text-zoom 3s linear infinite;
+}
+
+.img3{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 380px;
+    transform: translate(-50%,-50%);
+    animation: text-zoom 3s linear infinite;
+}
+
+.img4{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 340px;
+    transform: translate(-50%,-50%);
+    animation: text-zoom 3s linear infinite;
+}
+
+@keyframes text-zoom{
+    100%{
+        width: 100%;
+    }
+}
+
+.content-wrapper{
+    position: absolute;
+    left: 25px;
+    top: 80px;
+    width: 600px;
+    transform: translateY(100px);
+    animation: speed-y 12s linear infinite;
+}
+
+@keyframes speed-y{
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.content-wrapper1{
+    animation-delay: 0s;
+}
+
+.content-wrapper2{
+    animation-delay: 3s;
+}
+
+.content-wrapper3{
+    animation-delay: 6s;
+}
+
+.content-wrapper4{
+    animation-delay: 9s;
+}
+
+.title{
+    color: rgb(0, 255, 0);
+    margin-bottom: 30px;
+}
+
+.text-about{
+    color:rgb(255, 255, 255);
+    margin-top: 65px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.line{
+    background: red;
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 3px;
+}
+
+.image-container1{
+    animation: image1 12s linear infinite;
+}
+
+.image-container2{
+    animation: image2 12s linear infinite;
+}
+
+.image-container3{
+    animation: image3 12s linear infinite;
+}
+
+.image-container4{
+    animation: image4 12s linear infinite;
+}
+
+@keyframes image1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes image2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes image3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes image4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}

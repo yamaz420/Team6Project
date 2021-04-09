@@ -16,8 +16,9 @@ predictButton.addEventListener("click",async ()=>{
         body: JSON.stringify(testValues)
     });
     let prediction = await res.json();
-    $('#textarea-one').html(prediction);
-    
+    console.log(prediction)
+    $('#h4').html(prediction);
+    console.log('hej')
 
 })
  selectAll.forEach((selection) => {

@@ -17,8 +17,8 @@ predictButton.addEventListener("click",async ()=>{
     });
     let prediction = await res.json();
     console.log(prediction)
-    $('#h4').html(`
-        prediction=${prediction['prediction']}`);
+    $('#textarea-one').html(`
+    ${prediction['prediction']}`);
     console.log('hej')
 
 })

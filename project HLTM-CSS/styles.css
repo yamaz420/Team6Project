@@ -36,12 +36,12 @@ font-size: 35px;
 {
 background-image: url("https://previews.123rf.com/images/ezepov/ezepov1509/ezepov150900014/45319915-flat-cartoon-hipster-icon-video-game-controller-with-hand-vector-illustration.jpg");
 width: 75px;
-height: 75px;
-background-position: center;
-background-size: cover;
-margin-left: -40px;
-border: 3px solid black;
-border-radius: 10px;
+  height: 75px;
+  background-position: center;
+  background-size: cover;
+  margin-left: -40px;
+  border: 3px solid black;
+  border-radius: 10px;
 
 }
 

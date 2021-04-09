@@ -21,12 +21,13 @@ train_model()
 async def predict_results(req):
   values = req.json
   prediction = predict(values['Level'])
+  print("Predicted sales in selected genre:", prediction)
   return response.json(prediction)
 
 app.static('/', './dist')
 
 @app.exception(NotFound)
-async def ignore_404s():
+async def ignore_404s(req,err):
   return await response.file('./dist/index.html')
 
 if __name__ == "__main__":

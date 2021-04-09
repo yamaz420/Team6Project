@@ -21,5 +21,7 @@ def predict(Level):
   print(prediction)
 
 # kalla på båda funktionerna train_model() och predict():
-train_model()
-predict(Level=1)  
+# train_model()
+# predict(Level=5) 
+  result = {"Predicted sales in selected genre": prediction}
+  return result

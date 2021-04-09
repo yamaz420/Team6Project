@@ -2,14 +2,23 @@
  *  @Author: Erik Torres Puente
  * ................
  */
-let level;
- const selectAll = document.querySelectorAll(".selection");
-const predictButton = document.querySelector(".predict-btn")
+let Level;
+const selectAll = document.querySelectorAll(".selection");
+const predictButton = document.querySelector(".predict-btn");
 
-predictButton.addEventListener("click", ()=>{
-    if(level){
-        alert(level)
-    }
+predictButton.addEventListener("click",async ()=>{
+    
+    let testValues = {Level};
+        
+    
+    let res = await fetch('/api/predict', {
+        method: 'POST',
+        body: JSON.stringify(testValues)
+    });
+    let prediction = await res.json();
+    $('#textarea-one').html(prediction);
+    
+
 })
  selectAll.forEach((selection) => {
      const valuesWrapper = selection.previousElementSibling;
@@ -36,7 +45,7 @@ predictButton.addEventListener("click", ()=>{
             valuesWrapper.classList.remove("active");
             let dataLevel = option.getAttribute("data-level")
             if (dataLevel){
-                level = dataLevel
+                Level = dataLevel
 
             }
          });

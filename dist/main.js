@@ -58,7 +58,7 @@ predictButton.addEventListener("click",async ()=>{
  var myChart = new Chart(ctx, {
      type: 'line',
      data: {
-         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+         labels: ['Platform', 'Publisher', 'Genre', 'Green', 'Purple', 'Orange'],
          datasets: [{
              label: 'Video Game Sales (2000-2010)',
              data: [12, 19, 3, 5, 2, 3],

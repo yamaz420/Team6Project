@@ -559,9 +559,9 @@ li a:hover{
 .textarea-one{
     position: absolute;
     top: 335px;
-    left: 320px;
-    width: 270px;
-    height: 240px;
+    left: 310px;
+    width: 110px;
+    height: 70px;
     font-size: 30px;
     text-align: center;
     color: deeppink;
@@ -634,7 +634,7 @@ li a:hover{
 .arrow-six{
     position: absolute;
     top: 535px;
-    right: 150px;
+    right: 148px;
     font-size: 35px;
 }
 
